@@ -3,13 +3,13 @@
 class Car {
 
   start_car(options) {
-    if (options && options['headlights']) {
+    if (options && options.hasOwnProperty('headlights')) {
       this.headlights = options['headlights']
     } else {
       this.headlights = true
     }
 
-    if (options && options['gear']) {
+    if (options && options.hasOwnProperty('gear')) {
       this.gear = options['gear']
     } else {
       this.gear = 1
@@ -21,6 +21,7 @@ const herbie = new Car()
 
 // When we start the car, the headlights should be on by default
 herbie.start_car()
+console.log(herbie);
 
 console.log(herbie.headlights) // true
 
@@ -28,5 +29,7 @@ console.log(herbie.headlights) // true
 herbie.start_car({
   headlights: false
 })
+
+console.log(herbie);
 
 console.log(herbie.headlights) // true ...KOK BISA?!
