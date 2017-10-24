@@ -33,7 +33,7 @@ class House {
   }
 }
 
-const args = {
+const param = {
     address : 'Jl. Bank no. 5',
     square_feet : '100',
     num_bedrooms : 2,
@@ -44,6 +44,6 @@ const args = {
     short_sale : true,
     has_tenants : true
 }
-const cool = new House(args)
+const cool = new House(param)
 
 console.log(cool.to_s())
