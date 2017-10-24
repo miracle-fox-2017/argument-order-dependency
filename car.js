@@ -31,3 +31,4 @@ herbie.start_car({
 })
 
 console.log(herbie.headlights) // true ...KOK BISA?!
+//karena tadinya hanya mengecek value dari property headlights sehingga tidak memenuhi kondisi if &&
