@@ -3,16 +3,20 @@
 class Car {
 
   start_car(options) {
-    if (options && options['headlights']) {
-      this.headlights = options['headlights']
-    } else {
-      this.headlights = true
-    }
+    if (options !== null) {
 
-    if (options && options['gear']) {
-      this.gear = options['gear']
-    } else {
-      this.gear = 1
+      if (options && options.hasOwnProperty('headlights')) {
+        this.headlights = options['headlights']
+      } else {
+  
+        this.headlights = true
+      }
+
+      if (options && options['gear']) {
+        this.gear = options['gear']
+      } else {
+        this.gear = 1
+      }
     }
   }
 }
@@ -28,5 +32,7 @@ console.log(herbie.headlights) // true
 herbie.start_car({
   headlights: false
 })
+
+
 
 console.log(herbie.headlights) // true ...KOK BISA?!
